@@ -9,5 +9,6 @@
         <module name="mss-demo" />
       </profile>
     </annotationProcessing>
+    <bytecodeTargetLevel target="14" />
   </component>
 </project>
