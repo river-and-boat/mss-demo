@@ -3,10 +3,9 @@ package com.thoughtworks.controller;
 import com.thoughtworks.entity.Employee;
 import com.thoughtworks.mapper.EmployeeMapper;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.*;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RestController;
 
-import java.lang.reflect.Method;
 import java.util.List;
 
 /**
