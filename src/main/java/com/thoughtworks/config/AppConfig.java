@@ -43,6 +43,9 @@ public class AppConfig {
         SqlSessionFactoryBean sqlSessionFactoryBean = new SqlSessionFactoryBean();
         sqlSessionFactoryBean.setDataSource(dataSource);
         sqlSessionFactoryBean.setTypeAliasesPackage(propertiesConfig.getMybatisTypeAliasPackage());
+
+        sqlSessionFactoryBean.setConfigLocation(new PathMatchingResourcePatternResolver().getResource(propertiesConfig.getMybatisGlobalConfig()));
+
         // 动态获取SqlMapper
         PathMatchingResourcePatternResolver classPathResource = new PathMatchingResourcePatternResolver();
         sqlSessionFactoryBean.setMapperLocations(classPathResource.getResources(propertiesConfig.getMapperLocation())); // mapper/*.xml

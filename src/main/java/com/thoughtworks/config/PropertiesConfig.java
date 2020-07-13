@@ -37,6 +37,8 @@ public class PropertiesConfig {
     private String mybatisTypeAliasPackage;
     @Value("${mybatis.mapper.location}")
     private String mapperLocation;
+    @Value("${mybatis.global.config}")
+    private String mybatisGlobalConfig;
 
     public String getUrl() {
         return url;
@@ -80,6 +82,10 @@ public class PropertiesConfig {
 
     public String getMapperLocation() {
         return mapperLocation;
+    }
+
+    public String getMybatisGlobalConfig() {
+        return mybatisGlobalConfig;
     }
 
     @Bean
